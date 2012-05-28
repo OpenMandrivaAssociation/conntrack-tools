@@ -1,16 +1,20 @@
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.0.1
-Release:	2
+Version:	1.2.0
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		http://www.netfilter.org/projects/conntrack-tools/index.html
-Source:         http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2
-Source2:        http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2.sig
+Source0:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2
+Source1:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2.sig
+Patch0:		conntrack-tools-1.2.0-buildfix1.diff
+Patch1:		conntrack-tools-1.2.0-buildfix2.diff
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig
-BuildRequires:	pkgconfig(libnetfilter_conntrack) >= 0.9.1
+BuildRequires:	pkgconfig(libmnl) >= 1.0.0
+BuildRequires:	pkgconfig(libnetfilter_conntrack) >= 1.0.1
+BuildRequires:	pkgconfig(libnetfilter_cttimeout) >= 1.0.0
 BuildRequires:	pkgconfig(libnfnetlink) >= 1.0.0
 
 %description
@@ -25,6 +29,8 @@ well.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p0
 
 %build
 %configure2_5x \
@@ -38,6 +44,7 @@ well.
 %doc AUTHORS TODO doc/stats/conntrackd.conf
 %{_sbindir}/conntrack
 %{_sbindir}/conntrackd
+%{_sbindir}/nfct
 %{_mandir}/man8/conntrack.8*
 %{_mandir}/man8/conntrackd.8*
-
+%{_mandir}/man8/nfct.8*
