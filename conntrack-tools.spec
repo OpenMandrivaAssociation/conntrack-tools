@@ -1,6 +1,6 @@
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.2.0
+Version:	1.2.2
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -29,8 +29,8 @@ well.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p0
+#patch0 -p0
+#patch1 -p0
 
 %build
 %configure2_5x \
