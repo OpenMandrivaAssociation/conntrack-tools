@@ -1,0 +1,14 @@
+
+https://git.netfilter.org/cgi-bin/gitweb.cgi?p=conntrack-tools.git;a=commit;h=18efbc802479ce042378dc0cccc7577e1c6afa41
+
+--- src/nfct-extensions/timeout.c	2012-05-26 15:53:14.000000000 +0200
++++ src/nfct-extensions/timeout.c.oden	2012-05-28 13:11:15.000000000 +0200
+@@ -96,7 +96,7 @@ static int nfct_timeout_cb(const struct
+ 		goto err_free;
+ 	}
+ 
+-	nfct_timeout_snprintf(buf, sizeof(buf), t, 0);
++	nfct_timeout_snprintf(buf, sizeof(buf), t, NFCT_TIMEOUT_O_DEFAULT, 0);
+ 	printf("%s\n", buf);
+ 
+ err_free:
