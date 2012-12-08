@@ -7,8 +7,6 @@ Group:		System/Kernel and hardware
 URL:		http://www.netfilter.org/projects/conntrack-tools/index.html
 Source0:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2
 Source1:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2.sig
-Patch0:		conntrack-tools-1.2.0-buildfix1.diff
-Patch1:		conntrack-tools-1.2.0-buildfix2.diff
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig
@@ -29,8 +27,6 @@ well.
 
 %prep
 %setup -q
-#patch0 -p0
-#patch1 -p0
 
 %build
 %configure2_5x \
