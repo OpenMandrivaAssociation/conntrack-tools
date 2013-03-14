@@ -4,12 +4,11 @@ Version:	1.2.2
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-URL:		http://www.netfilter.org/projects/conntrack-tools/index.html
+Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
 Source0:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2
 Source1:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2.sig
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	pkgconfig
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
 BuildRequires:	pkgconfig(libnetfilter_conntrack) >= 1.0.1
 BuildRequires:	pkgconfig(libnetfilter_cttimeout) >= 1.0.0
@@ -44,3 +43,4 @@ well.
 %{_mandir}/man8/conntrack.8*
 %{_mandir}/man8/conntrackd.8*
 %{_mandir}/man8/nfct.8*
+
