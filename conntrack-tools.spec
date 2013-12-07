@@ -1,7 +1,7 @@
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
 Version:	1.2.2
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
