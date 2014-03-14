@@ -1,2 +1,3 @@
 sources:
-  "conntrack-tools-1.2.2.tar.bz2": f6709c0b33b46c6d3517450b536e9a4f5a082e40
+  conntrack-tools-1.4.2.tar.bz2: 50b89305bb689973d42a163c480dc77a5c0f6fe0
+  conntrack-tools-1.4.2.tar.bz2.sig: 55b1c8d2bbe32849e40db31778093b32048b3913
