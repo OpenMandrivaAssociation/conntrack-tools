@@ -1,7 +1,7 @@
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.2.2
-Release:	5
+Version:	1.4.2
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
@@ -13,6 +13,8 @@ BuildRequires:	pkgconfig(libmnl) >= 1.0.0
 BuildRequires:	pkgconfig(libnetfilter_conntrack) >= 1.0.1
 BuildRequires:	pkgconfig(libnetfilter_cttimeout) >= 1.0.0
 BuildRequires:	pkgconfig(libnfnetlink) >= 1.0.0
+BuildRequires:	pkgconfig(libnetfilter_queue) >= 1.0.2
+BuildRequires:	pkgconfig(libnetfilter_cthelper) >= 1.0.0
 
 %description
 The conntrack-tools are a set of tools targeted at system administrators.
@@ -40,6 +42,7 @@ well.
 %{_sbindir}/conntrack
 %{_sbindir}/conntrackd
 %{_sbindir}/nfct
+%{_libdir}/%{name}
 %{_mandir}/man8/conntrack.8*
 %{_mandir}/man8/conntrackd.8*
 %{_mandir}/man8/nfct.8*
