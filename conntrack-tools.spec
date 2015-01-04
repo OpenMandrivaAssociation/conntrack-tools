@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(libnetfilter_cttimeout) >= 1.0.0
 BuildRequires:	pkgconfig(libnfnetlink) >= 1.0.0
 BuildRequires:	pkgconfig(libnetfilter_queue) >= 1.0.2
 BuildRequires:	pkgconfig(libnetfilter_cthelper) >= 1.0.0
+BuildRequires:	pkgconfig(libtirpc)
 
 %description
 The conntrack-tools are a set of tools targeted at system administrators.
