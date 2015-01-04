@@ -1,7 +1,8 @@
+%define		_disable_ld_no_undefined 1
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
 Version:	1.4.2
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
@@ -30,8 +31,7 @@ well.
 %setup -q
 
 %build
-%configure2_5x \
-    --disable-static
+%configure
 %make
 
 %install
