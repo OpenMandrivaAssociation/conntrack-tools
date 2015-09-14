@@ -1,7 +1,7 @@
 %define		_disable_ld_no_undefined 1
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.4.2
+Version:	1.4.3
 Release:	7
 License:	GPLv2+
 Group:		System/Kernel and hardware
