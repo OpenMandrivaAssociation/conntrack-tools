@@ -1,8 +1,8 @@
 %define		_disable_ld_no_undefined 1
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.4.3
-Release:	9
+Version:	1.4.5
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
@@ -47,4 +47,4 @@ well.
 %{_mandir}/man8/conntrack.8*
 %{_mandir}/man8/conntrackd.8*
 %{_mandir}/man8/nfct.8*
-
+%{_mandir}/man5/conntrackd.conf.5.*
