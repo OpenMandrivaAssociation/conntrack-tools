@@ -1,13 +1,12 @@
 %define		_disable_ld_no_undefined 1
 Summary:	Userspace tools for interacting with the Connection Tracking System
 Name:		conntrack-tools
-Version:	1.4.7
-Release:	2
+Version:	1.4.8
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
-Source0:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2
-Source1:	http://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.bz2.sig
+Source0:	https://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.xz
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
@@ -29,14 +28,14 @@ enable highly available scenarios, and can be used as statistics collector as
 well.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS TODO doc/stats/conntrackd.conf
@@ -44,7 +43,7 @@ well.
 %{_sbindir}/conntrackd
 %{_sbindir}/nfct
 %{_libdir}/%{name}
-%{_mandir}/man8/conntrack.8*
-%{_mandir}/man8/conntrackd.8*
-%{_mandir}/man8/nfct.8*
-%{_mandir}/man5/conntrackd.conf.5.*
+%doc %{_mandir}/man8/conntrack.8*
+%doc %{_mandir}/man8/conntrackd.8*
+%doc %{_mandir}/man8/nfct.8*
+%doc %{_mandir}/man5/conntrackd.conf.5.*
