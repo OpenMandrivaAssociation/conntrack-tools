@@ -5,7 +5,7 @@ Version:	1.4.8
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://www.netfilter.org/projects/conntrack-tools/index.html
+Url:		https://www.netfilter.org/projects/conntrack-tools/index.html
 Source0:	https://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.xz
 BuildRequires:	bison
 BuildRequires:	flex
