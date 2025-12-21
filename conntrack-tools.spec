@@ -7,6 +7,11 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://www.netfilter.org/projects/conntrack-tools/index.html
 Source0:	https://netfilter.org/projects/conntrack-tools/files/%{name}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
